@@ -29,6 +29,7 @@ app.get('/transform', async (request, response) => {
      return response.status(204).send()
   } catch (error) {
     console.log(error)
+    return response.status(400)
   }
      
 })
