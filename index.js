@@ -26,7 +26,7 @@ app.get('/transform', async (request, response) => {
      // Here in done you have pdf file which you can save or transfer in another stream
      await fs.writeFile(outputPath, pdfBuf);
 
-     return response.status(204).send()
+     return response.status(201).sendFile(outputPath)
   } catch (error) {
     return response.status(400).send(error)
   }
